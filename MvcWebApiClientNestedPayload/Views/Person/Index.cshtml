@@ -15,7 +15,7 @@
             @Html.DisplayNameFor(model => model.Name)
         </th>
         <th>
-            Children Count
+            Children
         </th>
     </tr>
 
@@ -25,7 +25,12 @@
         @Html.DisplayFor(modelItem => item.Name)
     </td>
     <td>
-        @Html.DisplayFor(modelItem => item.people2.Count)
+        @*@Html.DisplayFor(modelItem => item.people2.Count)*@
+
+        @foreach (var p2 in item.people2)
+        {
+        <li>@p2.ID - @p2.Name</li>
+        }
     </td>
 </tr>
 }
